@@ -41,7 +41,7 @@ Given the BBC News dataset, the goals of this project are to:
   This project uses the **raw text files** from the dataset. All preprocessing steps were implemented from scratch to ensure full control and customization.
   
 - **Preprocessing Steps:**
-  - 🧹 **Text Cleaning:** Lowercasing, punctuation removal, stopword removal, etc.
+  - 🧹 **Text Cleaning:** Removing duplicates, lowercasing, punctuation removal, stopword removal, etc.
   - 🔠 **Tokenization:** Splitting text into tokens for analysis.
   - 📄 **LDA Corpus Formatting:** Creating document-term matrices and preparing text for topic modeling.
   - 🏷️ **Label Encoding:** Converting category/subcategory labels into numerical form for LLM training.
