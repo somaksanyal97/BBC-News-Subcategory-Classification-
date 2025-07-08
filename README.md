@@ -37,6 +37,9 @@ Given the BBC News dataset, the goals of this project are to:
 
 - **Source:** [BBC Dataset – UCD](http://mlg.ucd.ie/datasets/bbc.html)
 
+- **Usage:**  
+  This project uses the **raw text files** from the dataset. All preprocessing steps were implemented from scratch to ensure full control and customization.
+  
 - **Preprocessing Steps:**
   - 🧹 **Text Cleaning:** Lowercasing, punctuation removal, stopword removal, etc.
   - 🔠 **Tokenization:** Splitting text into tokens for analysis.
