@@ -33,7 +33,6 @@ Given the BBC News dataset, the goals of this project are to:
 - 📊 **Evaluation Metrics:**  
   Performance measured using **accuracy**, **F1-score**, **topic coherence scores**, and supported by **sample outputs**.
 
-
 ## 📁 Dataset
 
 - **Source:** [BBC Dataset – UCD](http://mlg.ucd.ie/datasets/bbc.html)
@@ -43,14 +42,6 @@ Given the BBC News dataset, the goals of this project are to:
   - 🔠 **Tokenization:** Splitting text into tokens for analysis.
   - 📄 **LDA Corpus Formatting:** Creating document-term matrices and preparing text for topic modeling.
   - 🏷️ **Label Encoding:** Converting category/subcategory labels into numerical form for LLM training.
-
-
-
-
-
-
-
-
 
 ## 📚 Citation
 
