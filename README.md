@@ -67,7 +67,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📂 Structure
+### 📂 Structure
 
 ```
 BBC-News-Subcategory-Classification-/
@@ -83,7 +83,7 @@ BBC-News-Subcategory-Classification-/
 
 ---
 
-## ✅ Usage
+### ✅ Usage
 
 Run a pipeline script (example):
 
@@ -141,6 +141,8 @@ Each category has its **own LDA model** trained on its respective articles. Thes
 
 This enables **automatic, interpretable subcategorization** of thousands of news articles without manual labeling.
 
+**[View the results here](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/results/bbc_lda_final_named_subcategories2.csv)**
+
 ---
 
 ### 📊 Coherence Scores by Category
@@ -177,7 +179,13 @@ This enables **automatic, interpretable subcategorization** of thousands of news
 
 Here the Gemma:2B model is used for the sub-categorisation. The model was run locally using Olama. 
 
+**[View the results here](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/results/classified_bbc_articles_with_entities_final.csv)**
+
 Initially, GPT 4 and Mistral:7B were tried, but due to hardware restrictions, ultimately the Gemma:2B model is implemented.
+
+⚠️ **Note:**  
+Only the **first 3000 tokens** of each article were included in the LLM prompt to avoid context length limits.  
+**Increasing the number of tokens** could improve classification performance, especially for long-form articles with relevant content further down.
 
 ### 📊 Semantic Coherence Scoring
 
