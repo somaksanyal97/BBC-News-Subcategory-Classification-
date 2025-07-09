@@ -5,3 +5,9 @@ nltk
 gensim
 scikit-learn
 wordcloud
+transformers
+torch
+tqdm
+beautifulsoup4
+requests
+urllib3
