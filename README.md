@@ -98,11 +98,17 @@ Ensure the data folder is unzipped locally after cloning.
 
 
   
-- **Preprocessing Steps:**
-  - 🧹 **Text Cleaning:** Removing duplicates, lowercasing, punctuation removal, stopword removal, etc.
-  - 🔠 **Tokenization:** Splitting text into tokens for analysis.
-  - 📄 **LDA Corpus Formatting:** Creating document-term matrices and preparing text for topic modeling.
-  - 🏷️ **Label Encoding:** Converting category/subcategory labels into numerical form for LLM training.
+- **Preprocessing and Analysis**
+Initial pre-processing includes:
+
+- 📂 Loading and organizing news articles by category  
+- 🧹 Removing duplicates and cleaning text (lowercasing, removing punctuation, stopwords, etc.)  
+- 🧠 Lemmatizing words using NLTK  
+- 🌥️ Visualizing top words per category using WordClouds  
+- 📈 Extracting top 50 frequent terms per category with `CountVectorizer`  
+
+The goal is to uncover the key subcategories discussed within each news category to use for classification in later stages.
+
 
 ## 📚 Citation
 
