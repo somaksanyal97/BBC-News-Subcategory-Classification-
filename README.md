@@ -16,6 +16,29 @@ Given the BBC News dataset, the goals of this project are to:
   - Took place in **April**
   - Were **scheduled** to occur in April
 
+## ✨ Key Features
+
+- 🧩 **Topic Modeling:**  
+  Unsupervised subcategory detection using **Latent Dirichlet Allocation (LDA)**.
+
+- 🤖 **Text Classification:**  
+  Fine-tuned transformer-based **Large Language Models (LLMs)** (e.g., `DistilBERT`, `BERT`) for multi-class subcategory classification.
+
+- 🏷️ **NER & Role Identification:**  
+  Named Entity Recognition with role classification using **SpaCy** and custom rule-based mappings.
+
+- 📰 **Summarization:**  
+  Extractive and abstractive summaries of **April-related articles** using **Hugging Face Transformers**.
+
+- 📊 **Evaluation Metrics:**  
+  Performance measured using **Coherence score**.
+
+## 📁 Dataset
+
+- **Source:** [BBC Dataset – UCD](http://mlg.ucd.ie/datasets/bbc.html)
+
+  This project uses the **raw text files** from the dataset. All preprocessing steps were implemented from scratch to ensure full control and customization.
+
 # BBC News NLP Pipelines
 
 This repository contains three Python scripts converted from Jupyter notebooks. They perform various NLP tasks on the BBC news dataset, focusing on topic modeling (LDA), classification and summarization using Gemma 2B + Olama, and exploratory analysis.
@@ -35,14 +58,12 @@ pip install -r requirements.txt
 
 ### 1️⃣ `lda_pipeline.py`
 - Performs topic modeling using LDA.
-- Saves processed CSVs and visualizations to `results/`.
 
 ### 2️⃣ `gemma_olama_pipeline.py`
 - Uses Gemma 2B + Olama for classification and summarization.
-- Prints and/or saves summaries in the `results/` folder.
 
-### 3️⃣ `untitled2_1.py`
-- Contains additional exploratory data analysis and NLP experiments.
+### 3️⃣ `bert-pipeline.py`
+- 
 
 ---
 
@@ -64,46 +85,18 @@ BBC-News-Subcategory-Classification-/
 
 ## ✅ Usage
 
-Run a specific pipeline script:
+Run a pipeline script (example):
 
 ```bash
 python lda_pipeline.py
 ```
 
-Ensure required data is placed in the `data/` folder.
+Ensure the data folder is unzipped locally after cloning. 
 
 ---
 
-## 🤝 Contributions
-
-Feel free to fork, test, and raise issues or pull requests to improve or adapt this repository for other datasets.
 
 
-
-
-## ✨ Key Features
-
-- 🧩 **Topic Modeling:**  
-  Unsupervised subcategory detection using **Latent Dirichlet Allocation (LDA)**.
-
-- 🤖 **Text Classification:**  
-  Fine-tuned transformer-based **Large Language Models (LLMs)** (e.g., `DistilBERT`, `BERT`) for multi-class subcategory classification.
-
-- 🏷️ **NER & Role Identification:**  
-  Named Entity Recognition with role classification using **SpaCy** and custom rule-based mappings.
-
-- 📰 **Summarization:**  
-  Extractive and abstractive summaries of **April-related articles** using **Hugging Face Transformers**.
-
-- 📊 **Evaluation Metrics:**  
-  Performance measured using **accuracy**, **F1-score**, **topic coherence scores**, and supported by **sample outputs**.
-
-## 📁 Dataset
-
-- **Source:** [BBC Dataset – UCD](http://mlg.ucd.ie/datasets/bbc.html)
-
-- **Usage:**  
-  This project uses the **raw text files** from the dataset. All preprocessing steps were implemented from scratch to ensure full control and customization.
   
 - **Preprocessing Steps:**
   - 🧹 **Text Cleaning:** Removing duplicates, lowercasing, punctuation removal, stopword removal, etc.
