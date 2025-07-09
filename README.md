@@ -46,15 +46,15 @@ pip install -r requirements.txt
 
 ---
 
-## 📂 Recommended Structure
+## 📂 Structure
 
 ```
-your-repo/
-├── data/                   # Raw input files (e.g., BBC dataset)
-├── results/                # Outputs (e.g., CSVs, plots, model outputs)
+BBC-News-Subcategory-Classification-/
+├── data/                   # BBC Dataset in zip file. Please unzip the data locally after cloning
+├── results/                # Outputs (CSV files with the final outputs to be stored here)
 ├── lda_pipeline.py
 ├── gemma_olama_pipeline.py
-├── untitled2_1.py
+├── bert-pipeline.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
