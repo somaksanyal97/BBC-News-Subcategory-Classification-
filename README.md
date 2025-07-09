@@ -177,7 +177,7 @@ This enables **automatic, interpretable subcategorization** of thousands of news
 
 ### 2. Subcategory Classification and Summarisation using `Gemma:2B`
 
-Here the Gemma:2B model is used for the sub-categorisation. The model was run locally using Olama. 
+Here the Gemma:2B model is used for the sub-categorisation and summarisation. The model was run locally using Olama. 
 
 **[View the results here](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/results/classified_bbc_articles_with_entities_final.csv)**
 
@@ -223,7 +223,24 @@ To assess **how well LLM-predicted subcategories semantically align** with artic
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_t.png" width="350" />
 </p>
 
+### 🧠 3. Subcategory Classification & Summarisation using `DistilBERT (BART-large-MNLI)`
 
+- For each article:
+  - Candidate subcategories are selected based on the main category.
+  - Text is truncated to **5000 characters** for efficiency and model compatibility.
+  - The model returns the most likely subcategory (if score ≥ 0.5); otherwise, assigns a fallback: `{category}_topic_other`.
+  - Summarisation for 'April' events is generated using `DistilBART CNN` summarizer.
+
+**[View the results here](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/results/classified_bbc_articles_distilbert.csv)**
+
+⚠️ **Note:**  
+Limiting input to **5000 characters** may reduce classification accuracy for longer articles.  
+Increasing token context could yield more accurate subcategory predictions.
+
+📊 Subcategory Coherence Evaluation (Gensim)
+
+- **C_V Coherence Score** is calculated.
+⚠️ Subcategories with **fewer than 5 articles** are skipped.
 
 
 
