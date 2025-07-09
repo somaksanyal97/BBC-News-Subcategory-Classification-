@@ -166,7 +166,7 @@ This enables **automatic, interpretable subcategorization** of thousands of news
 
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot2.png" width="350" />
-  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot4.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot3.png" width="350" />
 </p>
 
 <p align="center">
