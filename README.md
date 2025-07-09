@@ -97,8 +97,7 @@ Ensure the data folder is unzipped locally after cloning.
 
 
 
-  
-- **Preprocessing and Analysis**
+**Preprocessing and Analysis**
 Initial pre-processing includes:
 
 - 📂 Loading and organizing news articles by category  
