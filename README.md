@@ -210,7 +210,8 @@ Only first 3000 tokens are used per article due to prompt size constraints. Incr
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_t.png" width="350" />
 </p>
-### 🧠 3. Subcategory Classification & Summarisation using `DistilBERT (BART-large-MNLI)`
+
+## 3. Subcategory Classification & Summarisation using `DistilBERT (BART-large-MNLI)`
 
 - Uses `BART-large-MNLI` for classification:
   - If no subcategory has a confidence ≥ 0.5 → assigns `{category}_topic_other`
@@ -252,6 +253,8 @@ Increasing token context could yield more accurate subcategory predictions.
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_t.png" width="350" />
 </p>
 
+## **NER with Role Classification**  
+The code extracts named entities from BBC articles using SpaCy and assigns them specific societal roles like Politician, Musician, or TV Personality. Role classification is enhanced using context-based rules and LLM prompts (in the Gemma pipeline) for better accuracy.
 
 ## 📚 Citation
 
