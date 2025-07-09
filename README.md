@@ -241,17 +241,17 @@ Increasing token context could yield more accurate subcategory predictions.
 ### 📉 Subcategory Distribution (BART-large-MNLI)
 
 <p align="center">
-  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_b.png.png" width="350" />
-  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_e.png.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_b.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_e.png" width="350" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_p.png.png" width="350" />
-  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_s.png.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_p.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_s.png" width="350" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_t.png.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_t.png" width="350" />
 </p>
 ---
 
