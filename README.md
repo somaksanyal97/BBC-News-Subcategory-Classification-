@@ -16,6 +16,71 @@ Given the BBC News dataset, the goals of this project are to:
   - Took place in **April**
   - Were **scheduled** to occur in April
 
+# BBC News NLP Pipelines
+
+This repository contains three Python scripts converted from Jupyter notebooks. They perform various NLP tasks on the BBC news dataset, focusing on topic modeling (LDA), classification and summarization using Gemma 2B + Olama, and exploratory analysis.
+
+---
+
+## 🚀 Setup
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🛠️ Scripts
+
+### 1️⃣ `lda_pipeline.py`
+- Performs topic modeling using LDA.
+- Saves processed CSVs and visualizations to `results/`.
+
+### 2️⃣ `gemma_olama_pipeline.py`
+- Uses Gemma 2B + Olama for classification and summarization.
+- Prints and/or saves summaries in the `results/` folder.
+
+### 3️⃣ `untitled2_1.py`
+- Contains additional exploratory data analysis and NLP experiments.
+
+---
+
+## 📂 Recommended Structure
+
+```
+your-repo/
+├── data/                   # Raw input files (e.g., BBC dataset)
+├── results/                # Outputs (e.g., CSVs, plots, model outputs)
+├── lda_pipeline.py
+├── gemma_olama_pipeline.py
+├── untitled2_1.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+## ✅ Usage
+
+Run a specific pipeline script:
+
+```bash
+python lda_pipeline.py
+```
+
+Ensure required data is placed in the `data/` folder.
+
+---
+
+## 🤝 Contributions
+
+Feel free to fork, test, and raise issues or pull requests to improve or adapt this repository for other datasets.
+
+
+
+
 ## ✨ Key Features
 
 - 🧩 **Topic Modeling:**  
