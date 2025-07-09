@@ -133,7 +133,7 @@ The goal is to uncover the key subcategories discussed within each news category
 | **Sport**      | added, back, best, champion, chance, chelsea, club, coach, cup, england, final, first, france, game, get, go, goal, going, good, got, great, im, injury, ireland, last, made, match, minute, open, play, player, rugby, season, second, set, side, six, take, team, think, three, two, victory, wale, want, week, well, win, world, yearold |
 | **Tech**       | broadband, company, computer, consumer, data, device, digital, firm, first, gadget, game, get, home, information, internet, many, market, medium, microsoft, million, mobile, month, music, net, network, number, online, pc, phone, player, program, say, search, security, service, site, software, system, take, technology, tv, uk, used, user, using, video, way, website, work, world |
 
-### Unsupervised Topic Modeling (LDA)
+### 1. Unsupervised Topic Modeling (LDA)
 
 To derive **fine-grained subcategories** within each top-level news category (e.g., Business, Politics), we use **Latent Dirichlet Allocation (LDA)** — a powerful unsupervised topic modeling technique.
 
@@ -171,6 +171,48 @@ This enables **automatic, interpretable subcategorization** of thousands of news
 
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot4.png" width="350" />
+</p>
+
+### 2. Subcategory Classification and Summarisation using `Gemma:2B`
+
+Here the Gemma:2B model is used for the sub-categorisation. The model was run locally using Olama. 
+
+Initially, GPT 4 and Mistral:7B were tried, but due to hardware restrictions, ultimately the Gemma:2B model is implemented.
+
+### 📊 Semantic Coherence Scoring
+
+To assess **how well LLM-predicted subcategories semantically align** with article content:
+
+- Sentence embeddings (`MiniLM`) are generated for:
+  - The article (`text`)
+  - The predicted subcategory label (`subcategory`)
+- Cosine similarity is computed → **Coherence Score**
+- Higher scores mean better alignment.
+
+| Category      | Coherence Score |
+|---------------|-----------------|
+| Business      | 0.2287          |
+| Entertainment | 0.1960          |
+| Sport         | 0.2696          |
+| Politics      | 0.2587          |
+| Tech          | 0.2262          |
+
+### 📈 Visualization Examples
+
+#### Subcategory Distribution Barplot
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_b.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_e.png" width="350" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_p.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_s.png" width="350" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_t.png" width="350" />
 </p>
 
 
