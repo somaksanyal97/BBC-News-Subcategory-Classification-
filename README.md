@@ -123,7 +123,57 @@ The goal is to uncover the key subcategories discussed within each news category
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/politics.png" width="350" />
 </p>
 
- 
+## 🔠 Top 50 Terms per Category
+
+| Category       | Top 50 Terms |
+|----------------|--------------|
+| **Business**   | analyst, bank, bn, business, chief, china, company, cost, country, cut, deal, december, dollar, economic, economy, euro, executive, expected, figure, financial, firm, government, group, growth, however, investment, job, last, market, may, month, oil, price, profit, rate, report, rise, sale, say, share, since, state, stock, tax, two, uk, world, yukos, âbn, âm |
+| **Entertainment** | actor, actress, album, award, band, bbc, best, british, chart, comedy, day, director, festival, film, first, hit, including, last, life, made, million, movie, music, nomination, number, oscar, place, play, prize, record, rock, role, sale, series, show, singer, single, song, star, three, top, tv, two, uk, week, well, win, winner, world, âm |
+| **Politics**   | bbc, blair, britain, british, brown, campaign, chancellor, claim, conservative, council, country, election, general, get, government, home, howard, issue, labour, last, law, leader, lib, lord, made, minister, mp, next, party, plan, police, prime, public, report, right, say, secretary, service, spokesman, tax, told, tony, tory, two, uk, vote, want, way, week, work |
+| **Sport**      | added, back, best, champion, chance, chelsea, club, coach, cup, england, final, first, france, game, get, go, goal, going, good, got, great, im, injury, ireland, last, made, match, minute, open, play, player, rugby, season, second, set, side, six, take, team, think, three, two, victory, wale, want, week, well, win, world, yearold |
+| **Tech**       | broadband, company, computer, consumer, data, device, digital, firm, first, gadget, game, get, home, information, internet, many, market, medium, microsoft, million, mobile, month, music, net, network, number, online, pc, phone, player, program, say, search, security, service, site, software, system, take, technology, tv, uk, used, user, using, video, way, website, work, world |
+
+### Unsupervised Topic Modeling (LDA)
+
+To derive **fine-grained subcategories** within each top-level news category (e.g., Business, Politics), we use **Latent Dirichlet Allocation (LDA)** — a powerful unsupervised topic modeling technique.
+
+Each category has its **own LDA model** trained on its respective articles. These models uncover latent topics that represent thematic subclusters within that category (e.g., within *Business*: stock market, mergers, economic policy).
+
+This enables **automatic, interpretable subcategorization** of thousands of news articles without manual labeling.
+
+---
+
+### 📊 Coherence Scores by Category
+
+| Category      | Coherence Score |
+|---------------|-----------------|
+| Business      | 0.4282          |
+| Entertainment | 0.3636          |
+| Sport         | 0.4817          |
+| Politics      | 0.3402          |
+| Tech          | 0.3685          |
+
+---
+
+### 📈 Visualization Examples
+
+#### Subcategory Distribution Barplot
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot1.png" width="350" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot2.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot4.png" width="350" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot4.png" width="350" />
+</p>
+
+
 
 
 
