@@ -111,13 +111,13 @@ The goal is to uncover the key subcategories discussed within each news category
 <!-- First row: 3 images -->
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/business.png" width="250" />
-  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots_and_Visualisation/WordCloud_Visualisations/WC Politics.png" width="250" />
-  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots_and_Visualisation/WordCloud_Visualisations/WC entertainment.png" width="250" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/entertainment.png" width="250" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/politics.png" width="250" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots_and_Visualisation/WordCloud_Visualisations/WC sports.png" width="250" />
-  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots_and_Visualisation/WordCloud_Visualisations/WC tech.png" width="250" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/sports.png" width="250" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/tech.png" width="250" />
 </p>
 
 
