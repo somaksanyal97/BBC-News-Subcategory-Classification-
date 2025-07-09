@@ -1,5 +1,8 @@
 # 📰 BBC News Subcategory Classification
 
+### Somak Sanyal
+### sanyalsomakncl@gmail.com
+
 Fine-grained BBC News categorization for the **HMLR Data Science Challenge** using LLMs, LDA, NER with role tagging, and April-focused event summarization.
 
 ---
