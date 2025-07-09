@@ -101,12 +101,25 @@ Ensure the data folder is unzipped locally after cloning.
 - Initial pre-processing includes:
 
 - 📂 Loading and organizing news articles by category  
-- 🧹 Removing duplicates and cleaning text (lowercasing, removing punctuation, stopwords, etc.)  
+- 🧹 Removing duplicates and cleaning text (lowercasing, removing punctuation, custom stopwords, etc.)  
 - 🧠 Lemmatizing words using NLTK  
 - 🌥️ Visualizing top words per category using WordClouds  
 - 📈 Extracting top 50 frequent terms per category with `CountVectorizer`  
 
 The goal is to uncover the key subcategories discussed within each news category to use for classification in later stages.
+
+<!-- First row: 3 images -->
+<p align="center">
+  <img src="[IMAGE_URL_1](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20Business.png)" width="250" />
+  <img src="[IMAGE_URL_2](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20Politics.png)" width="250" />
+  <img src="[IMAGE_URL_3](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20entertainment.png)" width="250" />
+</p>
+
+<!-- Second row: 2 images -->
+<p align="center">
+  <img src="[IMAGE_URL_4](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20sports.png)" width="250" />
+  <img src="[IMAGE_URL_5](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20tech.png)" width="250" />
+</p>
 
 
 ## 📚 Citation
