@@ -112,13 +112,18 @@ The goal is to uncover the key subcategories discussed within each news category
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/business.png" width="350" />
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/entertainment.png" width="350" />
-  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/politics.png" width="350" />
 </p>
 
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/sports.png" width="350" />
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/tech.png" width="350" />
 </p>
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/politics.png" width="350" />
+</p>
+
+ 
 
 
 
