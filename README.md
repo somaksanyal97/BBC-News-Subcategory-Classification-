@@ -108,15 +108,17 @@ Ensure the data folder is unzipped locally after cloning.
 
 The goal is to uncover the key subcategories discussed within each news category to use for classification in later stages.
 
+<!-- First row: 3 images -->
 <p align="center">
-  <img src="[IMAGE_URL_1](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20Business.png)" width="250" />
-  <img src="[IMAGE_URL_2](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20Politics.png)" width="250" />
-  <img src="[IMAGE_URL_3](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20entertainment.png)" width="250" />
+  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20Business.png" width="250" />
+  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20Politics.png" width="250" />
+  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20entertainment.png" width="250" />
 </p>
 
+<!-- Second row: 2 images -->
 <p align="center">
-  <img src="(https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20sports.png)" width="250" />
-  <img src="[IMAGE_URL_5](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20tech.png)" width="250" />
+  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20sports.png" width="250" />
+  <img src="https://raw.githubusercontent.com/somaksanyal97/BBC-News-Subcategory-Classification-/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/WC%20tech.png" width="250" />
 </p>
 
 
