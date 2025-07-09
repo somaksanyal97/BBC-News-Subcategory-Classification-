@@ -1,69 +1,74 @@
-# BBC-News-Subcategory-Classification-
-BBC News subcategory classification for the HMLR Data Science Challenge using LLMs and LDA. Includes fine-grained topic modeling, transformer-based classification, named entity recognition with role tagging (e.g. politicians, musicians), and summarization of events related to April.
+# 📰 BBC News Subcategory Classification
 
+Fine-grained BBC News categorization for the **HMLR Data Science Challenge** using LLMs, LDA, NER with role tagging, and April-focused event summarization.
+
+---
 ## 🎯 Objective
 
-Given the BBC News dataset, the goals of this project are to:
+This project aims to:
 
-- 🔹 **Break down broad categories** (e.g., `Business`, `Entertainment`, `Sport`) into more meaningful **subcategories** such as:
-  - `Business` → *stock market*, *company news*, *mergers and acquisitions*
-  - `Entertainment` → *cinema*, *theatre*, *music*, *literature*, *personalities*
+- 🔹 **Break down broad BBC News categories** (e.g., `Business`, `Entertainment`, `Sport`) into more granular **subcategories**, such as:
+  - `Business` → *stock market*, *company news*, *M&A*
+  - `Entertainment` → *film*, *music*, *literature*, *TV personalities*
   - `Sport` → *cricket*, *football*, *Olympics*, etc.
 
-- 🔹 **Extract named entities** from the text and identify their **roles** (e.g., `Politician`, `TV/Film Personality`, `Musician`).
+- 🔹 **Extract named entities** and classify their **roles** (e.g., `Politician`, `Musician`, `TV Personality`).
 
-- 🔹 **Summarize articles** that describe events which:
-  - Took place in **April**
-  - Were **scheduled** to occur in April
-
-## ✨ Key Features
-
-- 🧩 **Topic Modeling:**  
-  Unsupervised subcategory detection using **Latent Dirichlet Allocation (LDA)**.
-
-- 🤖 **Text Classification:**  
-  Fine-tuned transformer-based **Large Language Models (LLMs)** (e.g., `DistilBERT`, `BERT`) for multi-class subcategory classification.
-
-- 🏷️ **NER & Role Identification:**  
-  Named Entity Recognition with role classification using **SpaCy** and custom rule-based mappings.
-
-- 📰 **Summarization:**  
-  Extractive and abstractive summaries of **April-related articles** using **Hugging Face Transformers**.
-
-- 📊 **Evaluation Metrics:**  
-  Performance measured using **Coherence score**.
-
-## 📁 Dataset
-
-- **Source:** [BBC Dataset – UCD](http://mlg.ucd.ie/datasets/bbc.html)
-
-  This project uses the **raw text files** from the dataset. All preprocessing steps were implemented from scratch to ensure full control and customization.
-
-# BBC News NLP Pipelines
-
-This repository contains three Python scripts converted from Jupyter notebooks. They perform various NLP tasks on the BBC news dataset, focusing on topic modeling (LDA), classification and summarization using Gemma 2B + Olama, and exploratory analysis.
+- 🔹 **Summarize articles** mentioning events:
+  - That occurred in **April**
+  - That were **scheduled for April**
 
 ---
 
-## 🚀 Setup
+## ✨ Key Features
+
+- 🧩 **Topic Modeling (LDA)**  
+  Subcategory discovery per category using Latent Dirichlet Allocation.
+
+- 🤖 **Transformer-Based Text Classification**  
+  Fine-tuned LLMs (Gemma 2B + Olama, DistilBERT/BART) for multi-class subcategory classification.
+
+- 🏷️ **NER with Role Classification**  
+  Extracted entities are tagged with specific societal roles using SpaCy and rule-based heuristics.
+
+- 📰 **Summarization**  
+  April-related summaries using Hugging Face Transformers (e.g., `DistilBART CNN`) and `Gemma:2B`.
+
+- 📊 **Evaluation**  
+  - LDA: Topic **Coherence Score**
+  - LLM: Semantic alignment using **MiniLM** sentence embeddings and semantic coherence score
+
+---
+## 📁 Dataset
+
+- **Source:** [BBC Dataset – UCD](http://mlg.ucd.ie/datasets/bbc.html)
+- Raw `.txt` news articles grouped by 5 top-level categories: `business`, `entertainment`, `politics`, `sport`, and `tech`.
+
+Preprocessing is handled manually for full control.
+
+---
+## 🧪 BBC News NLP Pipelines
+
+This repo includes **three modular pipelines**, each handling a major NLP component:
+
+| Pipeline | Script | Description |
+|---------|--------|-------------|
+| 🧠 Topic Modeling | `lda_pipeline.py` | Runs category-wise LDA to generate subcategories |
+| 🤖 LLM Classification + Summarization | `gemma_olama_pipeline.py` | Uses Gemma 2B via Olama for role-tagged entity extraction, subcategory classification, and April-related summarization |
+| 🔬 BERT/NLI-based Classification | `bert-pipeline.py` | Classifies articles using `BART-large-MNLI`, summarizes using `DistilBART` |
+
+---
+
+
+## 🛠️ Setup
 
 Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## 🛠️ Scripts
-
-### 1️⃣ `lda_pipeline.py`
-- Performs topic modeling using LDA.
-
-### 2️⃣ `gemma_olama_pipeline.py`
-- Uses Gemma 2B + Olama for classification and summarization.
-
-### 3️⃣ `bert-pipeline.py`
-- 
+Ensure the `data/` folder is unzipped after cloning the repo.
 
 ---
 
@@ -81,8 +86,6 @@ BBC-News-Subcategory-Classification-/
 └── .gitignore
 ```
 
----
-
 ### ✅ Usage
 
 Run a pipeline script (example):
@@ -91,20 +94,11 @@ Run a pipeline script (example):
 python lda_pipeline.py
 ```
 
-Ensure the data folder is unzipped locally after cloning. 
-
----
-
-
-
-## Preprocessing and Analysis
-- Initial pre-processing includes:
-
-- 📂 Loading and organizing news articles by category  
-- 🧹 Removing duplicates and cleaning text (lowercasing, removing punctuation, custom stopwords, etc.)  
-- 🧠 Lemmatizing words using NLTK  
-- 🌥️ Visualizing top words per category using WordClouds  
-- 📈 Extracting top 50 frequent terms per category with `CountVectorizer`  
+### Preprocessing and Analysis
+- Articles are grouped by category
+- Duplicates removed, text cleaned (stopwords, lemmatization via NLTK)
+- Visualized using **WordClouds** per category
+- Top 50 frequent terms per category using `CountVectorizer`
 
 The goal is to uncover the key subcategories discussed within each news category to use for classification in later stages.
 
@@ -123,7 +117,9 @@ The goal is to uncover the key subcategories discussed within each news category
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/WordCloud%20Visualisations/politics.png" width="350" />
 </p>
 
-## 🔠 Top 50 Terms per Category
+---
+
+### 🔠 Top 50 Terms per Category
 
 | Category       | Top 50 Terms |
 |----------------|--------------|
@@ -133,19 +129,19 @@ The goal is to uncover the key subcategories discussed within each news category
 | **Sport**      | added, back, best, champion, chance, chelsea, club, coach, cup, england, final, first, france, game, get, go, goal, going, good, got, great, im, injury, ireland, last, made, match, minute, open, play, player, rugby, season, second, set, side, six, take, team, think, three, two, victory, wale, want, week, well, win, world, yearold |
 | **Tech**       | broadband, company, computer, consumer, data, device, digital, firm, first, gadget, game, get, home, information, internet, many, market, medium, microsoft, million, mobile, month, music, net, network, number, online, pc, phone, player, program, say, search, security, service, site, software, system, take, technology, tv, uk, used, user, using, video, way, website, work, world |
 
-### 1. Unsupervised Topic Modeling (LDA)
+---
 
-To derive **fine-grained subcategories** within each top-level news category (e.g., Business, Politics), we use **Latent Dirichlet Allocation (LDA)** — a powerful unsupervised topic modeling technique.
+## 1. Unsupervised Topic Modeling (LDA)
 
-Each category has its **own LDA model** trained on its respective articles. These models uncover latent topics that represent thematic subclusters within that category (e.g., within *Business*: stock market, mergers, economic policy).
-
-This enables **automatic, interpretable subcategorization** of thousands of news articles without manual labeling.
+- Each category has its **own LDA model**
+- Reveals **latent subtopics** (e.g., in `Business`: *M&A*, *banking*, *stock market*)
+- No manual labeling required
 
 **[View the results here](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/results/bbc_lda_final_named_subcategories2.csv)**
 
 ---
 
-### 📊 Coherence Scores by Category
+### 📊 Coherence Scores (LDA)
 
 | Category      | Coherence Score |
 |---------------|-----------------|
@@ -157,9 +153,7 @@ This enables **automatic, interpretable subcategorization** of thousands of news
 
 ---
 
-### 📈 Visualization Examples
-
-#### Subcategory Distribution Barplot
+#### Subcategory Distribution
 
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot.png" width="350" />
@@ -175,27 +169,22 @@ This enables **automatic, interpretable subcategorization** of thousands of news
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/LDA/lda_barplot4.png" width="350" />
 </p>
 
-### 2. Subcategory Classification and Summarisation using `Gemma:2B`
+## 2. LLM Classification + Summarization (Gemma 2B via Olama)
 
-Here the Gemma:2B model is used for the sub-categorisation and summarisation. The model was run locally using Olama. 
+- Runs locally with **Gemma 2B** using **Olama**
+- Predicts subcategories, tags named entities with roles (e.g., `Politician`, `Musician`)
+- Summarizes articles if:
+  - Event occurred in April
+  - Event is scheduled for April
 
 **[View the results here](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/results/classified_bbc_articles_with_entities_final.csv)**
 
 Initially, GPT 4 and Mistral:7B were tried, but due to hardware restrictions, ultimately the Gemma:2B model is implemented.
 
-⚠️ **Note:**  
-Only the **first 3000 tokens** of each article were included in the LLM prompt to avoid context length limits.  
-**Increasing the number of tokens** could improve classification performance, especially for long-form articles with relevant content further down.
+⚠️ **Token limit:**  
+Only first 3000 tokens are used per article due to prompt size constraints. Increasing this may improve performance.
 
-### 📊 Semantic Coherence Scoring
-
-To assess **how well LLM-predicted subcategories semantically align** with article content:
-
-- Sentence embeddings (`MiniLM`) are generated for:
-  - The article (`text`)
-  - The predicted subcategory label (`subcategory`)
-- Cosine similarity is computed → **Coherence Score**
-- Higher scores mean better alignment.
+### 📊 Semantic Coherence (MiniLM)
 
 | Category      | Coherence Score |
 |---------------|-----------------|
@@ -205,9 +194,8 @@ To assess **how well LLM-predicted subcategories semantically align** with artic
 | Politics      | 0.2587          |
 | Tech          | 0.2262          |
 
-### 📈 Visualization Examples
 
-#### Subcategory Distribution Barplot
+### 📉 Subcategory Distribution (Gemma)
 
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_b.png" width="350" />
@@ -222,26 +210,50 @@ To assess **how well LLM-predicted subcategories semantically align** with artic
 <p align="center">
   <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/Gemma/gemma_t.png" width="350" />
 </p>
+---
 
 ### 🧠 3. Subcategory Classification & Summarisation using `DistilBERT (BART-large-MNLI)`
 
-- For each article:
-  - Candidate subcategories are selected based on the main category.
-  - Text is truncated to **5000 characters** for efficiency and model compatibility.
-  - The model returns the most likely subcategory (if score ≥ 0.5); otherwise, assigns a fallback: `{category}_topic_other`.
-  - Summarisation for 'April' events is generated using `DistilBART CNN` summarizer.
+- Uses `BART-large-MNLI` for classification:
+  - If no subcategory has a confidence ≥ 0.5 → assigns `{category}_topic_other`
+- April event summarization via `DistilBART CNN`
+- Input truncated to **5000 characters** for performance
 
 **[View the results here](https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/results/classified_bbc_articles_distilbert.csv)**
 
-⚠️ **Note:**  
+⚠️ **Token limit:**
 Limiting input to **5000 characters** may reduce classification accuracy for longer articles.  
 Increasing token context could yield more accurate subcategory predictions.
 
 📊 Subcategory Coherence Evaluation (Gensim)
 
-- **C_V Coherence Score** is calculated.
-⚠️ Subcategories with **fewer than 5 articles** are skipped.
+| Category      | Coherence Score |
+|---------------|-----------------|
+| Business      | 0.3538          |
+| Entertainment | 0.3632          |
+| Sport         | 0.4143          |
+| Politics      | 0.3636          |
+| Tech          | 0.3279          |
 
+📊 Coherence scored using `gensim`’s `C_V` metric  
+🔁 Skips subcategories with < 5 samples
+
+### 📉 Subcategory Distribution (BART-large-MNLI)
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_b.png.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_e.png.png" width="350" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_p.png.png" width="350" />
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_s.png.png" width="350" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/somaksanyal97/BBC-News-Subcategory-Classification-/blob/main/Plots%20and%20Visualisation/bert/bert_t.png.png" width="350" />
+</p>
+---
 
 
 ## 📚 Citation
